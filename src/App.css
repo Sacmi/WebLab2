@@ -1,6 +1,7 @@
 img {
     object-fit: cover;
     height: 400px;
+    padding-bottom: 40px;
 }
 
 .swiper-slide {
