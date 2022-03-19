@@ -51,45 +51,75 @@ const Deposit = () => {
   };
 
   return (
-    <div className="row align-items-center">
-      <div className="col">
-        <p>Выберите вклад:</p>
+    <>
+      <h4 className="display-6">Калькулятор вкладов</h4>
 
-        <select
-          onChange={selectDeposit}
-          value={currentDeposit.deposit}
-          className="form-select"
-        >
-          {DepositInfo.map((deposit, index) => (
-            <option key={index} value={deposit.deposit}>
-              {deposit.label}
-            </option>
-          ))}
-        </select>
+      <div className="row">
+        <div className="col col-lg-6" style={{ paddingTop: "12px" }}>
+          <div className="card">
+            <div className="card-body">
+              <h3 className="card-title">Конструктор вклада</h3>
+              <label className="form-label">Выберите вклад:</label>
 
-        <p>Выберите срок:</p>
-        <select onChange={selectPeriod} className="form-select">
-          {DepositInfo[currentDeposit].periods.map((val, index) => (
-            <option key={index} value={val.value}>
-              {val.label}
-            </option>
-          ))}
-        </select>
+              <select
+                onChange={selectDeposit}
+                value={currentDeposit.deposit}
+                className="form-select"
+              >
+                {DepositInfo.map((deposit, index) => (
+                  <option key={index} value={deposit.deposit}>
+                    {deposit.label}
+                  </option>
+                ))}
+              </select>
 
-        <p>Сумма:</p>
-        <input className="form-control" value={money} onInput={changeMoney} />
+              <br />
+
+              <label className="form-label">Выберите срок:</label>
+              <select onChange={selectPeriod} className="form-select">
+                {DepositInfo[currentDeposit].periods.map((val, index) => (
+                  <option key={index} value={val.value}>
+                    {val.label}
+                  </option>
+                ))}
+              </select>
+
+              <br />
+
+              <label className="form-label">Сумма:</label>
+              <input
+                className="form-control"
+                value={money}
+                onInput={changeMoney}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6" style={{ paddingTop: "12px" }}>
+          <div className="card">
+            <div className="card-body">
+              <h3 className="card-title">Информация по вкладу</h3>
+              <p className="card-text">
+                Выбран вклад: {DepositInfo[currentDeposit].label}
+              </p>
+              <p className="card-text">
+                Срок: {DepositInfo[currentDeposit].periods[currentPeriod].label}
+              </p>
+              <p className="card-text">
+                Проценты:{" "}
+                {DepositInfo[currentDeposit].periods[currentPeriod].percent *
+                  100}
+                %
+              </p>
+              <p className="card-text">Исходная сумма: {money} рублей</p>
+              <p className="card-text">
+                В конце срока вы получите {formatMoney(calculate())} рублей
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="col">
-        <p>Выбран вклад: {DepositInfo[currentDeposit].label}</p>
-        <p>Срок: {DepositInfo[currentDeposit].periods[currentPeriod].label}</p>
-        <p>
-          Проценты:{" "}
-          {DepositInfo[currentDeposit].periods[currentPeriod].percent * 100}%
-        </p>
-        <p>Исходная сумма: {money} рублей</p>
-        <p>В конце срока вы получите {formatMoney(calculate())} рублей</p>
-      </div>
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 export const PicsData = [
   "https://sun9-14.userapi.com/impf/s_dGHBu4CzExTO4ENTY-mcIBfuFwI85oXU0dww/NSz7r5ztFwI.jpg?size=1440x1920&quality=95&sign=48f0b7e6a8d4dce4c073b64411461286&type=album",
   "https://sun9-51.userapi.com/impf/L11iDGxeIXV7rN6vH33NLnjhS4XzGMvomasBRg/U8SdcrNEb9M.jpg?size=1620x2160&quality=96&sign=d4826e1037117f2eba040cdb85ff2034&type=album",
-  "https://sun9-86.userapi.com/impf/5v9rJh7qSZk2EuYYBFFShj8e6HoO_begdOUJ3A/xGZVk5tct9s.jpg?size=1218x1624&quality=95&sign=a4a0e84a764b0aa594dd546d4d33b2b3&type=album",
+  // "https://sun9-86.userapi.com/impf/5v9rJh7qSZk2EuYYBFFShj8e6HoO_begdOUJ3A/xGZVk5tct9s.jpg?size=1218x1624&quality=95&sign=a4a0e84a764b0aa594dd546d4d33b2b3&type=album",
   "https://sun9-31.userapi.com/impf/v1ZHEU6X5C7imgGrSflSE3yJ3ZBCn7iKXufogw/AulSUIyLwPw.jpg?size=1218x1624&quality=95&sign=10f3013e9a5664a54ce5cfbd146f03a3&type=album",
   "https://sun9-76.userapi.com/impf/vNTteMvhWIrXlLsXej9AzX7iRUwpQZjuNZhrfw/YHwjB8LTvsY.jpg?size=1218x1624&quality=95&sign=6ff43584d14555b65deb965a6a5681c8&type=album",
   "https://sun9-63.userapi.com/impf/8KXho7Wiz-ZGEVbysUwQ6g9dUSFIGpVYOcSfhQ/gZE67F_DiH8.jpg?size=1218x1624&quality=95&sign=426d4ec6b86ec3f83ad3c1a49cb2dfb3&type=album",
@@ -33,17 +33,17 @@ export const DepositInfo = [
       {
         value: 12,
         label: "1 год",
-        percent: 0.2,
+        percent: 0.22,
       },
       {
         value: 18,
         label: "1.5 года",
-        percent: 0.2,
+        percent: 0.15,
       },
       {
         value: 24,
         label: "2 года",
-        percent: 0.2,
+        percent: 0.1,
       },
     ],
   },
@@ -55,6 +55,31 @@ export const DepositInfo = [
         value: 3,
         label: "3 месяца",
         percent: 0.2,
+      },
+      {
+        value: 6,
+        label: "6 месяцев",
+        percent: 0.22,
+      },
+      {
+        value: 9,
+        label: "9 месяцев",
+        percent: 0.23,
+      },
+      {
+        value: 12,
+        label: "1 год",
+        percent: 0.24,
+      },
+      {
+        value: 18,
+        label: "1.5 года",
+        percent: 0.18,
+      },
+      {
+        value: 24,
+        label: "2 года",
+        percent: 0.15,
       },
     ],
   },
