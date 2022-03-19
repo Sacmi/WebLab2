@@ -1,4 +1,4 @@
-import { PicsUrl } from "./data";
+import { PicsData } from "./data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar } from "swiper";
 
@@ -6,10 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export const Slider = () => (
+const Slider = () => (
   <Swiper
     modules={[Navigation, Scrollbar, Pagination]}
-    centeredSlides={false}
     loop
     navigation
     pagination
@@ -26,15 +25,13 @@ export const Slider = () => (
         spaceBetween: 40,
       },
     }}
-    // navigation={{
-    //   nextEl: ".swiper-button-next",
-    //   prevEl: ".swiper-button-prev",
-    // }}
   >
-    {PicsUrl.map((url, index) => (
+    {PicsData.map((url, index) => (
       <SwiperSlide key={index}>
         <img src={url} alt="Фотка" />
       </SwiperSlide>
     ))}
   </Swiper>
 );
+
+export default Slider;
